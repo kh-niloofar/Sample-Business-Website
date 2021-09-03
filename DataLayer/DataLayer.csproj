@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{148EE069-525F-4BFE-8A32-57BF2C2AFADF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer</RootNamespace>
+    <AssemblyName>DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MYTestSite\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MYTestSite\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\..\..\c#\test\MVC\TESTCMS\DataLayer\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\Connect.cs" />
+    <Compile Include="Migrations\202106270918023_db-created.cs" />
+    <Compile Include="Migrations\202106270918023_db-created.designer.cs">
+      <DependentUpon>202106270918023_db-created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107240706210_update-type-of-blogVisit.cs" />
+    <Compile Include="Migrations\202107240706210_update-type-of-blogVisit.Designer.cs">
+      <DependentUpon>202107240706210_update-type-of-blogVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107261140123_image_not_required.cs" />
+    <Compile Include="Migrations\202107261140123_image_not_required.Designer.cs">
+      <DependentUpon>202107261140123_image_not_required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107261240201_Date-type-changed.cs" />
+    <Compile Include="Migrations\202107261240201_Date-type-changed.Designer.cs">
+      <DependentUpon>202107261240201_Date-type-changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107291300128_change-type-of-Project-Visit.cs" />
+    <Compile Include="Migrations\202107291300128_change-type-of-Project-Visit.Designer.cs">
+      <DependentUpon>202107291300128_change-type-of-Project-Visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108050926283_add-Service-content.cs" />
+    <Compile Include="Migrations\202108050926283_add-Service-content.Designer.cs">
+      <DependentUpon>202108050926283_add-Service-content.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108211441533_nullable-blogId-and-projectId-in-comments.cs" />
+    <Compile Include="Migrations\202108211441533_nullable-blogId-and-projectId-in-comments.Designer.cs">
+      <DependentUpon>202108211441533_nullable-blogId-and-projectId-in-comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108240747218_add-login-model.cs" />
+    <Compile Include="Migrations\202108240747218_add-login-model.Designer.cs">
+      <DependentUpon>202108240747218_add-login-model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogCat.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\page.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Services.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IBlogCatRepos.cs" />
+    <Compile Include="Repositories\IBlogRepos.cs" />
+    <Compile Include="Repositories\ICommentRepos.cs" />
+    <Compile Include="Repositories\ILoginRepos.cs" />
+    <Compile Include="Repositories\IProjectRepos.cs" />
+    <Compile Include="Repositories\IServiceRepos.cs" />
+    <Compile Include="Services\BlogCatRepos.cs" />
+    <Compile Include="Services\BlogRepos.cs" />
+    <Compile Include="Services\CommentRepos.cs" />
+    <Compile Include="Services\LoginRepos.cs" />
+    <Compile Include="Services\ProjectRepos.cs" />
+    <Compile Include="Services\ServiceRepos.cs" />
+    <Compile Include="ViewModels\AnswerBlogCommentViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106270918023_db-created.resx">
+      <DependentUpon>202106270918023_db-created.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107240706210_update-type-of-blogVisit.resx">
+      <DependentUpon>202107240706210_update-type-of-blogVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107261140123_image_not_required.resx">
+      <DependentUpon>202107261140123_image_not_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107261240201_Date-type-changed.resx">
+      <DependentUpon>202107261240201_Date-type-changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107291300128_change-type-of-Project-Visit.resx">
+      <DependentUpon>202107291300128_change-type-of-Project-Visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108050926283_add-Service-content.resx">
+      <DependentUpon>202108050926283_add-Service-content.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108211441533_nullable-blogId-and-projectId-in-comments.resx">
+      <DependentUpon>202108211441533_nullable-blogId-and-projectId-in-comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108240747218_add-login-model.resx">
+      <DependentUpon>202108240747218_add-login-model.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
